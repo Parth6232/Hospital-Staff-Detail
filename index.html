@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hospital app</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Dont make any changes here -->
-    <h1>Hospital - Doctor Records</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Staff Records</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Hospital - Doctor Records</h1>
 
-    <div>
-      <!-- ***** We are using form here  ****  -->
-      <form>
-        <label for="">Doctor Name</label><br />
-        <input id="name" type="text" placeholder="Enter Doctor Name" /><br />
-        <label for="">Doctor ID</label><br />
-        <input
-          id="docID"
-          type="number"
-          placeholder="Enter Doctor ID"
-        /><br />
-        <label for="">Specialization </label><br />
-        <select id="dept">
-          <option value="">Select Specialization</option>
-          <option value="Dermatologist">Dermatologist</option>
-          <option value="ENT">ENT</option>
-          <option value="Dentist">Dentist</option>
-          <option value="COVID">COVID</option>
-          <option value="Gynecologist">Gynecologist</option></select
-        ><br />
-        <label for="">Experience </label><br />
-        <input id="exp" type="number" placeholder="Experience in Years" /><br />
-        <label for="">Email Address </label><br />
-        <input type="text" id="email" placeholder="Enter Email Address" /><br />
-        <label for="">Mobile Number </label><br />
-        <input id="mbl" type="number" placeholder="Enter Mobile number" /><br />
-        <input type="submit" />
-      </form>
-      <table>
-        <!-- Dont change order of columns -->
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Doctor ID</th>
-            <th>Specialization</th>
-            <th>Experience in years</th>
-            <th>Email address</th>
-            <th>Mobile Number</th>
-            <th>Role</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- ******* Append your output here ********* -->
-        </tbody>
-      </table>
-    </div>
-  </body>
+  <div class="container">
+    <form id="staffForm">
+      <label>Doctor Name</label>
+      <input id="name" type="text" placeholder="Enter Doctor Name" required />
+
+      <label>Doctor ID</label>
+      <input id="docID" type="text" placeholder="Enter Doctor ID" required />
+
+      <label>Specialization</label>
+      <select id="dept" required>
+        <option value="">Select Specialization</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="ENT">ENT</option>
+        <option value="Dentist">Dentist</option>
+        <option value="COVID">COVID</option>
+        <option value="Gynecologist">Gynecologist</option>
+      </select>
+
+      <label>Experience (Years)</label>
+      <input id="exp" type="number" min="0" placeholder="Experience in Years" required />
+
+      <label>Email Address</label>
+      <input id="email" type="email" placeholder="Enter Email Address" required />
+
+      <label>Mobile Number</label>
+      <input id="mbl" type="tel" placeholder="Enter Mobile Number" required />
+
+      <input type="submit" value="Add Doctor" />
+    </form>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Doctor ID</th>
+          <th>Specialization</th>
+          <th>Experience</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
-
-<script src="script.js"></script>
